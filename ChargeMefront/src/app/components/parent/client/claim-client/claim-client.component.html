@@ -1,0 +1,44 @@
+
+<header class="p-3 mb-3 border-bottom">
+
+    <div class="container">
+       
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+ 
+        <img [src]="image" style="width:200px;height: 50px; margin-left: 0;">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Stations</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Reclamation</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+           
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+<h1>Send claim</h1>
+<div class="mb-3" style="width: 50%;margin-left: 20%;">
+    <label for="exampleFormControlInput1" class="form-label">subject</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="subject">
+  </div>
+  <div class="mb-3" style="width: 50%;margin-left: 20%;">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="button" class="btn btn-outline-warning" style="border-radius: 20px;margin-left: 64%;">send</button>

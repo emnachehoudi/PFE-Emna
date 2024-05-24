@@ -1,0 +1,82 @@
+<h1>Reservation</h1>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="align-middle text-center">
+      <th>Photo</th>
+      <th>Nom</th> 
+      <th>Prénom</th>
+      <th>Numéro de téléphone</th>
+      <th>Date de réservation</th>
+      <th>Period</th>
+      <th>Born</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reservation of listreserv.listeResev">
+      <td class="align-middle text-center"><img [src]="img1" alt="Photo de l'utilisateur" height="50"></td>
+      <td class="align-middle text-center">{{ reservation.firstname }}</td>
+      <td class="align-middle text-center">{{ reservation.lastname }}</td>
+      <td class="align-middle text-center">{{ reservation.phone }}</td>
+      <td class="align-middle text-center">{{ reservation.dateReservation | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+      <td class="align-middle text-center">{{ reservation.period }}</td>
+      <td class="align-middle text-center">{{ reservation.Born_name }}</td>
+      <td class="align-middle text-center">
+        <button class="btn fa fa-eye"></button>
+        <button class="btn fa fa-trash" data-toggle="modal" data-target="#confirmDeleteModal"></button>
+       <!-- <button class="btn fa fa-pen" (click)="modifierReservation(reservation)"></button>-->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--pagination-->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end" >
+    <li class="page-item ">
+     <!--<a class="page-link">Previous</a>-->
+     <button class="page-link" (click)="Previous()">Previous</button>
+    </li >
+    <!--<li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+    <li class="page-item">
+      <!--<a class="page-link" href="#">Next</a>-->
+      <button class="page-link" (click)="next()">Next</button>
+    </li>
+  </ul>
+</nav>
+<!-- Popup de modification -->
+<div class="modal" *ngIf="showPopup">
+  <div class="modal-content">
+    <span class="close" (click)="fermerPopup()">&times;</span>
+    <h2>Modifier la réservation</h2> 
+    <form>
+      <!-- Ajoutez les champs du formulaire ici -->
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="reservationModifiee.nom">
+      <!-- Ajoutez d'autres champs du formulaire pour les autres propriétés de la réservation -->
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+    </form>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmation de suppression</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Are you sure ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDelete(reservations)" data-dismiss="modal">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

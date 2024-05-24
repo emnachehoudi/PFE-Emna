@@ -1,0 +1,54 @@
+.welcome{
+    color: orange;
+    margin-left: 50px;
+}
+.welcome span{
+    color: black;
+}
+.contenu{
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
+}
+.card{
+    margin-right: 50px;
+}
+button{
+border: 1px solid #a0dd91;
+color: #a0dd91;
+margin-left: 20px;
+width: 200px;
+}
+button:hover{
+    background-color: #a0dd91;
+}
+input{
+    border-radius: 20px;
+}
+.form-group{
+    width: 250px;
+    margin-left: 8%;
+}
+.btn{
+    margin-left: 10%;
+}
+.confirmation-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+  
+  .confirmation-content {
+    text-align: center;
+  }
+  
+  .confirmation-content button {
+    margin: 5px;
+  }
+  

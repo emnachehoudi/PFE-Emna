@@ -1,0 +1,74 @@
+.from-outline form {
+    display: flex;
+    align-items: left;
+}
+
+.from-outline form > * {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    .from-outline form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .from-outline form input,
+    .from-outline form button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+
+.table{
+    margin-top: 50px;
+}
+.btn-outline-create {
+  --color: #22aa5f;
+  max-width: 20%;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  color: var(--color);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+ }
+ 
+ .btn-outline-create:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ 
+ .btn-outline-create:hover {
+    color: #075a2d;
+   }
+
+ .btn-outline-create:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+  background-color: #00f870;
+ }
+ 
+ .btn-outline-create:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+ 
+ .btn-outline-create:active:before {
+  background: #42bc23;
+  transition: background 0s;
+ }

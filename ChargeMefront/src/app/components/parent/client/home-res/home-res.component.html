@@ -1,0 +1,83 @@
+<header class="p-3 mb-3 border-bottom">
+
+    <div class="container">
+       
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+ 
+        <img [src]="image" style="width:200px;height: 50px; margin-left: 0;">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Stations</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">Reclamation</a></li>
+          <li><a href="#" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+           
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="welcome"><h1>Welcome !! </h1> <br><span>reserve your place</span>
+  </div>
+<div class="contenu">
+    <div class="card" style="width: 18rem;">
+        <img [src]="maps" style="padding: 10px;">
+        <div class="card-body">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Area
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">zone1</a></li>
+                  <li><a class="dropdown-item" href="#">zone2</a></li>
+                  <li><a class="dropdown-item" href="#">zone3</a></li>
+                </ul>
+              </div>        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img [src]="terminal">
+        <div class="card-body">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Terminals
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Terminal 1</a></li>
+                  <li><a class="dropdown-item" href="#">Terminal 2</a></li>
+                  <li><a class="dropdown-item" href="#">Terminal 3</a></li>
+                </ul>
+              </div>              </div>
+      </div>
+      <div class="card" style="width: 18rem;height: 18rem;padding-top: 20px;">
+        <form (ngSubmit)="submitReservation()">
+            <div class="form-group">
+              <label for="date">Date :</label>
+              <input type="date" id="date" name="date" class="form-control" [(ngModel)]="reservation.date" required>
+            </div>
+            <div class="form-group">
+              <label for="heure">Heure :</label>
+              <input type="time" id="heure" name="heure" class="form-control" [(ngModel)]="reservation.heure" required>
+            </div>
+            <div class="form-group" style="margin-bottom: 10px;" >
+              <label for="duree">Durée de recharge (en minutes) :</label>
+              <input type="number" id="duree" name="duree" class="form-control" [(ngModel)]="reservation.duree" required>
+            </div>
+            <button type="submit" class="btn " >Réserver</button>
+          </form>
+          
+      </div>
+</div>

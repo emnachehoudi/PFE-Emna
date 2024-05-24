@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+section .cover {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #303334;
+}
+
+section .cover img {
+  display: flex;
+  margin-top: 50%;
+  margin-left: 100px;
+}
+
+section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+section .content .formBx {
+  width: 50%;
+}
+
+/* Ajoutez des styles spécifiques pour les éléments à l'intérieur de .formBx ici */
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column; /* Pour changer l'orientation de la section sur les écrans plus petits */
+  }
+
+  section .cover,
+  section .content {
+    width: 100%; /* Utilisez 100% de la largeur sur les écrans plus petits */
+    height: auto; /* Ajustez la hauteur automatiquement */
+  }
+
+  section .cover img {
+    margin-left: auto; /* Centrer l'image horizontalement */
+    margin-right: auto;
+  }
+
+  section .content .formBx {
+    width: 80%; /* Réduire la largeur du formulaire pour s'adapter aux écrans plus petits */
+  }
+
+  /* Ajoutez d'autres styles spécifiques pour les écrans plus petits ici */
+}

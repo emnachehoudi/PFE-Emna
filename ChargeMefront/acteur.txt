@@ -1,0 +1,4 @@
+4200 => admin 
+5000 => owner
+5200 => moderateur 
+4000 => super

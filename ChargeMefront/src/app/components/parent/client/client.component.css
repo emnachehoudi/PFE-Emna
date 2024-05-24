@@ -1,0 +1,25 @@
+button{
+margin-left: 400px;
+border-radius: 30px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+  }
+  footer{
+    height: 100px;
+    background-color: #a0dd91;
+    margin-bottom: 0;
+  }
+  li img {
+    list-style: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 30%;
+  margin: 0 7px;
+  
+  cursor: pointer;
+  }

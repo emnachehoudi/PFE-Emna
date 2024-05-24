@@ -1,0 +1,14 @@
+<ng-container *ngIf="isPort(4200)">
+    <app-admin-space></app-admin-space>
+  </ng-container>
+  <ng-container *ngIf="isPort(5000)">
+    <app-owner-space></app-owner-space>
+  </ng-container>
+  <ng-container *ngIf="isPort(5200)">
+    <app-moderator-space></app-moderator-space>
+  </ng-container>
+  <ng-container *ngIf="isPort(4000)">
+    <app-super-admin></app-super-admin>
+  </ng-container>
+
+  <router-outlet></router-outlet>

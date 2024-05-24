@@ -1,0 +1,42 @@
+<div class="popup-container">
+  <div class="popup-content">
+    <button class="fa fa-circle-xmark" (click)="fermerPopup()" style="align-self: flex-end;
+    position: absolute; 
+    top: 5px; 
+    right: 5px; 
+    z-index: 1; 
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #42BC23;" ></button>
+
+    <h1 mat-dialog-title>Terminal Details</h1>
+
+    <div mat-dialog-content>
+      <div class="terminal-details">
+        <img [src]="borne?.image" alt="Borne de recharge" class="borne-image">
+        <h2>{{ borne?.emplacement }}</h2>
+        <p>Availability: {{ getAvailability() }}</p>
+        <p>Type: {{ borne?.etatB }}</p>
+        <p>Price per kilowatt: {{ borne?.prixParKilowatt }}</p>
+      </div>
+      <div class="car-details">
+        <h2>Car details</h2>
+        
+        <!-- Utilisation des données de la voiture -->
+        <p>Car name: {{ car.nom }}</p>
+        <p>Registration number: {{ car.matricule }}</p>
+        <p>Connector type: {{ car.typeConnecteur }}</p>
+        <label for="customRange1" class="form-label">Recharge percentage</label><br><span>0%</span>
+        <input type="range" [value]="car.pourcentageRecharge" class="form-range" id="customRange1" style="width: 300px;">
+         <span>100%  </span>    
+      </div>
+         
+      <div class="calendar">
+        <h2>Calendar</h2>
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </div>
+</div>

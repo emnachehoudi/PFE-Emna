@@ -1,0 +1,15 @@
+<h2>Create Zone</h2>
+<form>
+  <div class="row mb-3">
+    <div class="col">
+      <label for="zoneName" class="form-label">Zone Name</label>
+      <input type="text" class="form-control" required id="zoneName" [(ngModel)]="zoneName" name="zoneName" >
+      <label id="alertvide" style="color: red;display: none;">you must fill in the field</label>
+      <label id="alertexist" style="color: red;display: none;">This zone's name is exist </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-end">
+        <button type="submit" class="btn " >submit</button>
+    </div>
+  </div>

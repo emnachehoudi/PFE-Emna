@@ -1,0 +1,39 @@
+<div class="return" >
+  <a href="" routerLink="/moderator"><i class="fa fa-chevron-left" aria-hidden="true"></i>back</a></div>
+<h2>Edit moderator</h2>
+
+<form (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="firstname">First name</label>
+    <input type="text" class="form-control" id="firstname" [(ngModel)]="moderator.firstname" name="firstname" required>
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last name</label>
+    <input type="text" class="form-control" id="lastname" [(ngModel)]="moderator.lastname" name="lastname" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone number</label>
+    <input type="text" class="form-control" id="phone" [(ngModel)]="moderator.phone" name="phone" required>
+  </div>
+  <div class="form-group">
+    <label for="address">Adress</label>
+    <input type="text" class="form-control" id="address" [(ngModel)]="moderator.address" name="address" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="status">Station</label>
+    <div class="input-group mb-3">
+      <select class="form-select" id="inputGroupSelect02" [(ngModel)]="moderator.status">
+        <option selected>Choose...</option>
+        <option value="1">Satation One</option>
+        <option value="2">Station Two</option>
+        <option value="3">Station Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="stationnum">Nombre de stations:</label>
+    <input type="number" class="form-control" id="stationnum" [(ngModel)]="moderator.stationnum" name="stationnum" required>
+  </div>
+  <button type="submit" class="btn ">Edit </button>
+</form>

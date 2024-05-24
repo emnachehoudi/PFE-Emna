@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+section .cover{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: #303334;
+}
+section .cover img {
+  max-width: 100%; /* Rendre l'image responsive */
+  height: auto; /* Assurer que l'aspect ratio de l'image est préservé */
+  margin-top: 50%;
+  margin-left: 100px;
+}
+
+section .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+
+}
+section .content .formBx{
+  width: 60%;
+}
+section .content .formBx h2{
+  color: #303334;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-bottom: 4px solid #ffc31f;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+section .content .formBx .inputBx span{
+  font-size: 16px;
+  display: inline-block;
+  color: #607d8b;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+}
+section .content .formBx .inputBx input{
+  width: 100%;
+  height: 70%;
+  padding: 10px 20px;
+  outline:none;
+  font-weight: 200;
+  border-radius: 10px;
+  border: 1px solid #ffc31f;
+  font-size: 16px;
+  color: #607d8b;
+  background:transparent ;
+  margin: 5px;
+}
+section .content .formBx .inputBx .adress{
+  display: flex;
+  
+}
+section .content .formBx .inputBx input[type="submit"]{
+
+  background-color:  #42BC23;
+  border-radius: 50px;
+  color: #fff;
+  width: 30%;
+  height: 50%;
+  margin-left: 70%;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+section .content .formBx .inputBx input[type="submit"]:hover{
+  background: #fff;
+  color: #42BC23 ;
+}
+
+section .content .formBx .inputBx p {
+  color: #607d8b;
+}
+section .content .formBx .inputBx .radio-bt{
+  display: flex;
+  margin: 0;
+}
+
+
+.inputBx {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputBx > span {
+  flex: 0 0 50%; /* Ajustez la largeur selon vos besoins */
+}
+
+.inputBx > input[type="text"] {
+  flex: 1; /* Pour que le champ prenne le reste de l'espace disponible */
+}
+
+.inputBx .phone-wrapper {
+  display: flex;
+  align-items: center; /* Aligner les éléments verticalement au centre */
+  width: 70%;
+  margin-left: 10%;
+}
+
+.inputBx .phone-wrapper select {
+  width: 30%; /* Ajuster la largeur du menu déroulant */
+  margin-right: 10px; /* Espacement entre le menu déroulant et le champ de numéro de téléphone */
+}
+
+.inputBx .phone-wrapper input {
+  width: 70%; /* Ajuster la largeur du champ de numéro de téléphone */
+}

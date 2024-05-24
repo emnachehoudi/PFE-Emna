@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    
+  }
+  .img{
+    padding: 10px;
+    margin: 10px;
+  }
+  .app-popup {
+    position: fixed;
+    top: 80px;
+    right: 50px;
+    bottom: 50px;
+    width: 50%; /* ou ajustez selon vos besoins */
+    background-color: #fff; /* fond semi-transparent */
+    z-index: 999; /* assurez-vous que le pop-up est au-dessus du contenu */
+    border: solid 1px rgb(214, 214, 214);
+    border-radius: 20px;
+  }
+  
+  .popup-content {
+    position: relative; /* Assurez-vous que le positionnement relatif est défini sur le conteneur de pop-up */
+  }
+  
+  .popup-hidden {
+    display: none; /* Cacher le pop-up par défaut */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px; /* Ajustez la position verticale selon vos besoins */
+    right: 10px; /* Ajustez la position horizontale selon vos besoins */
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #42BC23;;
+  }
+ 
+ 
+
+  

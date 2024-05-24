@@ -1,0 +1,44 @@
+<section>
+  <div class="cover">
+   <img [src]="image">
+  </div>
+   <div class="content">
+    <div class="logo"><img [src]="image"></div>
+    <div class="formBx">
+      <h2>SignUp </h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="inputBx">
+          <span>First name</span>
+          <input type="text" name="firstName" [(ngModel)]="Owner.firstName">
+          <span>Last name</span>
+          <input type="text" name="lastName" [(ngModel)]="Owner.firstName">
+        </div>
+        <div class="inputBx">
+          <span>Adress</span>
+          <div class="adress">
+          <input type="text" name="street" placeholder="street" [(ngModel)]="Owner.street">
+          <input type="text" name="state" placeholder="state" [(ngModel)]="Owner.state">
+          <input type="text" name="country" placeholder="country" [(ngModel)]="Owner.country">
+          <input type="text" name="zipcode" placeholder="zip code" [(ngModel)]="Owner.zipcode">
+        </div>
+        </div>
+        <div class="inputBx">
+         <span>Phone number</span>
+              <input type="number" name="phoneNumber" [(ngModel)]="Owner.phone">
+             <span>Email</span>
+             <input type="email" name="email" [(ngModel)]="Owner.email">
+             <span>Password</span>
+             <input type="password" name="Password" [(ngModel)]="Owner.password">
+            </div>
+          
+        
+        <div class="remember">
+        <label><input type="checkbox" name="">Accept policy conditions</label>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="Sign in" name="">
+        </div>
+      </form>
+    </div>
+   </div>
+</section>

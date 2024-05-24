@@ -1,0 +1,53 @@
+  <section>
+    <div class="cover">
+     <img [src]="image">
+  
+    </div>
+     <div class="content">
+      <div class="logo"><img [src]="image"></div>
+      <div class="formBx">
+        <h2>Owner Space  </h2>
+        <form>
+          <div class="inputBx">
+            <span>Username</span> 
+            <input type="text" id="login" required [(ngModel)]="owner.login" name="login" >
+          </div>
+          <div class="inputBx">
+            <span>Password</span>
+            <input type="password" id="password" required [(ngModel)]="owner.password" name="password">
+          </div>
+          <!-- <div class="remember">
+          <label><input type="checkbox" name="">Remember me</label>
+          </div> -->
+          <div class="remember">
+            <label id="alert" style="color: red;display: none;">Verifier vos cordonner s'il vous plait</label>
+            </div>
+          <div class="inputBx">
+            
+            <input type="submit" [routerLink]="" (click)="login()" value="Sign in" name="">
+          </div>
+          <p>Don't have an account?&nbsp;<a href="#"><span style="color:#42BC23 ;" routerLink='../SinUp'>Sign Up</span></a></p>
+        </form>
+  
+        <h3>Login with social media</h3>
+        <ul class="sci">
+          <li>
+           <img [src]="facebook">
+          </li>
+          <li>
+            <img [src]="apple">
+          </li>
+          <li>
+            <img [src]="google">
+          </li>
+          <li>
+            <img [src]="twitter">
+          </li>
+        </ul>
+      </div>
+     </div>
+     
+  
+  </section>
+            
+  

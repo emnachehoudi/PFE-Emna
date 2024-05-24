@@ -1,0 +1,84 @@
+
+<div class="return" >
+  <a href="" routerLink="/stations"><i class="fa fa-chevron-left" aria-hidden="true"></i>back</a></div>
+<h2>Edit Station</h2>
+  
+ 
+  
+ 
+ 
+
+
+  <form (ngSubmit)="submitForm()">
+<div class="container">
+  <div class="row">
+      <div class="row">
+          <div class="col">
+              <label for="inputemail" class="col-form-label">Station name</label>
+              <input type="text" class="form-control" formControlName="firstname" [(ngModel)]="station.firstname" placeholder="First name"
+                  aria-label="First name">
+          </div>
+          <div class="col">
+              <label for="inputadress" class="col-form-label">Adress</label>
+              <input type="text" class="form-control" id="inputAddress2"[(ngModel)]="station.address" formControlName="adress"
+                  placeholder="Apartment, studio, or floor">
+          </div>
+      </div>
+      <div class="row " >
+          <div class="col">
+              <label for="inputterminal" class="form-label">Number of terminal</label>
+              <input type="number" class="form-control" id="inputterminal" [(ngModel)]="station.bornenum" formControlName="terminal">
+          </div>
+         
+          <div class="col">
+              <label for="inputAddress" class="form-label">Phone nummber </label>
+              <input type="number" class="form-control" id="inputAddress" [(ngModel)]="station.phone" formControlName="phonenumber"
+                  placeholder="1234 Main St">
+          </div>
+          <div class="col">
+            <label for="phone">Price per KW:</label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="station.price" name="phone" required>
+          </div>
+          </div>
+          <div class="row">
+              <div class="col">
+              <label for="status">Statue:</label>
+              <select class="form-select" id="status" name="status" [(ngModel)]="station.status" required>
+                <option selected>Choose...</option>
+                <option value="1">Activate</option>
+                <option value="2">Desactivate</option>
+              </select></div>
+              <div class="col">
+                  <label for="status">type of station</label>
+                  <select class="form-select" id="typeofstation" name="typeofstation" required>
+                    <option selected>Choose...</option>
+                    <option value="1">Real</option>
+                    <option value="2">Virtual</option>
+                  </select></div>
+                  <div class="col">
+                      <label for="status">confirmation station</label>
+                      <select class="form-select" id="confirmation" name="confirmation" required>
+                        <option selected>Choose...</option>
+                        <option value="1">Confirmed</option>
+                        <option value="2">Being confirmed</option>
+                      </select></div>
+                  </div>
+                  <div class="row">
+          <div class="col">
+              <label for="inputlong" class="form-label">longitude </label>
+              <input type="number" class="form-control" id="inputlong" formControlName="longitude"
+                  placeholder="0000">
+          </div>
+     
+          <div class="col">
+              <label for="inputlat" class="form-label">latitude </label>
+              <input type="number" class="form-control" id="inputlat" formControlName="latitude"
+                  placeholder="0000">
+          <div class="text-end">
+            <button type="submit" class="btn ">Save  </button>
+          </div>
+        </div>
+
+      </div>
+  </div>
+

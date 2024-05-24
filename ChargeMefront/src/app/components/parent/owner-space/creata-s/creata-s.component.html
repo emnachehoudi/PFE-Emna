@@ -1,0 +1,82 @@
+<div class="popup-container"  >
+  <div class="popup">
+    <h2>Create Station</h2>
+    <form >
+      <div class="row mb-3"> 
+        <div class="col">
+          <label for="stationName" class="form-label">Name</label>
+          <input type="text" class="form-control" id="stationName" [(ngModel)]="createStation.name" name="stationName" required >
+        </div>
+        <div class="col">
+          <label for="registerNumber" class="form-label">Register Number</label>
+          <input type="text" class="form-control" id="registerNumber" [(ngModel)]="createStation.registerNumber" name="registerNumber" required>
+          <label id="alertexist" style="color: red;display: none;"> This Number exists</label>   
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label for="stationAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" id="stationAddress" [(ngModel)]="createStation.address" name="stationAddress"required >
+        </div>
+        <div class="col">
+          <label for="pricePerKW" class="form-label">Price per KW</label>
+          <input type="text" class="form-control" id="pricePerKW" [(ngModel)]="createStation.pricePerKW" name="pricePerKW" required >
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label for="stationPhone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="stationPhone" [(ngModel)]="createStation.phone" name="stationPhone" required>
+        </div>
+        <div class="col">
+          <label for="stationStatus" class="form-label">Status</label>
+          <select class="form-select"  id="stationStatus" [(ngModel)]="createStation.stationStatus" name="stationStatus" >
+            <option value="ouvert">Active</option>
+            <option value="fermer">Inactive</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label for="typeStation" class="form-label">Type of Station</label>
+          <select class="form-select" id="typeStation" [(ngModel)]="createStation.typeStation" name="typeStation" required>
+            <option value="reel" >Real</option>
+            <option value="virtuel" >Virtual</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="confirmStatus" class="form-label">Confirmation Status</label>
+          <select class="form-select" id="confirmStatus" [(ngModel)]="createStation.confirmStatus"  name="confirmStatus" required>
+            <option value="Confirmer" selected>confirmed</option>
+            <option value="enCour" >being confirmed</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="longitude" class="form-label">Longitude</label>
+          <input type="text" pattern="[0-9]*\.?[0-9]+" class="form-control" id="longitude" [(ngModel)]="createStation.longitude" name="longitude"  required>
+        </div>
+        <div class="col">
+          <label for="latitude" class="form-label">Latitude</label>
+          <input type="text" pattern="[0-9]*\.?[0-9]+" class="form-control" id="latitude" [(ngModel)]="createStation.latitude" name="latitude"  required >
+        </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;" [disabled]="!createStationForm.valid">Save</button>
+        <button type="button" class="btn btn-secondary ms-3" style="margin-top: 10px;" routerLink="/stations" >Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="popup-container" *ngIf="showStationSuccessPopup">
+  <div class="popup">
+    <h2>Station Created!</h2>
+    <button type="button" class="btn btn-primary" (click)="closeCreatePopup()">Dismiss!</button>
+  </div>
+</div>
+
+
+
+
